@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .section{
+            content-visibility: auto;
+            contain-intrinsic-size: 527px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+
+        <div class="section main">
+            <div class="image">
+                <img src="https://picsum.photos/id/237/200/300" alt="kutja">
+            </div>
+            <div class="txt">
+                <h1>Check content visibility</h1>
+            </div>
+        </div>
+
+        <div class="section"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quis recusandae officia totam expedita accusamus optio suscipit iste? Cum numquam, sint illum provident in, sed non voluptas exercitationem magni est, nostrum eius quo omnis dolore modi delectus vitae cumque consequuntur! Voluptatum officiis culpa consequuntur cumque placeat possimus a quibusdam magnam? Assumenda iusto eligendi voluptas nesciunt dicta impedit voluptatum aliquid debitis quas odio eaque, itaque atque aspernatur quo iure, maiores quasi adipisci iste. Sapiente expedita, nesciunt tenetur minus pariatur corrupti totam! Saepe eos et corrupti minima ratione, repellat, consectetur, explicabo dolorem rem dicta quae quia consequuntur ea libero quasi placeat autem. Sed dignissimos magnam ex excepturi voluptates amet ullam velit sint esse dicta voluptate molestiae quos aspernatur corrupti, nulla expedita voluptatem. Doloribus eos vel cupiditate dolores impedit itaque quaerat, corporis placeat aliquid facilis explicabo amet ducimus dolorum velit fugit eum saepe officia nisi sit soluta in deserunt quas? Ipsam dicta doloremque aut magni sint, quis quasi error rem veritatis vitae asperiores pariatur repellendus accusantium fugiat rerum similique sunt voluptates sed corporis ducimus maiores esse beatae eum quisquam. Molestiae maxime natus in et iusto eaque quisquam commodi distinctio quos, veritatis dolore nisi a eligendi animi reiciendis sequi. Nemo pariatur quo aliquid est repellat in nulla sed, quis totam aut consectetur magni eos beatae nam. Culpa aliquam vitae sunt omnis nostrum sit ea, ipsa, porro esse repellat repellendus quo? Id assumenda quam maiores asperiores quas vel. Sint laboriosam eveniet numquam deleniti, consequatur eaque id quasi pariatur inventore accusantium repudiandae molestias nesciunt quia? Amet numquam at adipisci iusto, quo voluptatum voluptatem sapiente cupiditate porro illo, hic, repellendus asperiores fugiat consectetur molestias debitis quia est nobis tenetur nam odit. Aut quis quae corrupti culpa veritatis optio, eius nihil sapiente natus obcaecati facilis iste consequatur totam a delectus impedit quasi eum quia! Quas corrupti incidunt ipsam.</p>
+
+        <div class="sections"></div>
+    </div>
+    <script>
+        function display(url){
+            return `
+            <div class="section">
+                <div class="image">
+                    <img src=${url} alt="foto">
+                </div>
+                <div class="txt">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quis recusandae officia totam expedita accusamus optio suscipit iste? Cum numquam, sint illum provident in, sed non voluptas exercitationem magni est, nostrum eius quo omnis dolore modi delectus vitae cumque consequuntur! Voluptatum officiis culpa consequuntur cumque placeat possimus a quibusdam magnam? Assumenda iusto eligendi voluptas nesciunt dicta impedit voluptatum aliquid debitis quas odio eaque, itaque atque aspernatur quo iure, maiores quasi adipisci iste. Sapiente expedita, nesciunt tenetur minus pariatur corrupti totam! Saepe eos et corrupti minima ratione, repellat, consectetur, explicabo dolorem rem dicta quae quia consequuntur ea libero quasi placeat autem. Sed dignissimos magnam ex excepturi voluptates amet ullam velit sint esse dicta voluptate molestiae quos aspernatur corrupti, nulla expedita voluptatem. Doloribus eos vel cupiditate dolores impedit itaque quaerat, corporis placeat aliquid facilis explicabo amet ducimus dolorum velit fugit eum saepe officia nisi sit soluta in deserunt quas? Ipsam dicta doloremque aut magni sint, quis quasi error rem veritatis vitae asperiores pariatur repellendus accusantium fugiat rerum similique sunt voluptates sed corporis ducimus maiores esse beatae eum quisquam. Molestiae maxime natus in et iusto eaque quisquam commodi distinctio quos, veritatis dolore nisi a eligendi animi reiciendis sequi. Nemo pariatur quo aliquid est repellat in nulla sed, quis totam aut consectetur magni eos beatae nam. Culpa aliquam vitae sunt omnis nostrum sit ea, ipsa, porro esse repellat repellendus quo? Id assumenda quam maiores asperiores quas vel. Sint laboriosam eveniet numquam deleniti, consequatur eaque id quasi pariatur inventore accusantium repudiandae molestias nesciunt quia? Amet numquam at adipisci iusto, quo voluptatum voluptatem sapiente cupiditate porro illo, hic, repellendus asperiores fugiat consectetur molestias debitis quia est nobis tenetur nam odit. Aut quis quae corrupti culpa veritatis optio, eius nihil sapiente natus obcaecati facilis iste consequatur totam a delectus impedit quasi eum quia! Quas corrupti incidunt ipsam.</p>
+                </div>
+        </div>
+            `
+        }
+        let url,rand
+        for(let i=0;i<50;i++){
+            rand=Math.floor(Math.random()*500)+1
+            url=`"https://picsum.photos/id/${rand}/200/300"`
+            console.log(url)
+            document.querySelector(".sections").innerHTML+=display(url)
+        }
+    </script>
+</body>
+</html>
